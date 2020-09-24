@@ -25,8 +25,10 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component'
+
+@Options({
   name: 'TheHeader',
 
   data() {
@@ -40,7 +42,9 @@ export default {
       return this.menu = !this.menu
     }
   }
-}
+})
+
+export default class TheHeader extends Vue {}
 </script>
 
 <style scoped>
